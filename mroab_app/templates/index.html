@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load  static %}
+{% block content %}
+
+  <!-- <a-scene>
+      <a-sky src="http://i.imgur.com/FzosV5t.jpg" rotation="0 -130 0"></a-sky>
+    </a-scene>-->
+    {% for obj in obj_list %}
+    	<img src="{% static 'media/photos' %}/{{obj.slugger}}.jpg" style="width: 50%">
+    	<a href="site/{{obj.slugger}}"><h1>{{obj.title}}</h1></a>
+    	{{obj.location}}</br>
+    	{{obj.description}}</br>
+    {% endfor %}
+{% endblock %}

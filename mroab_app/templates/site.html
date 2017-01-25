@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load  static %}
+{% block content %}
+	<a-scene>
+      <a-sky src="{% static 'media/photos' %}/{{obj.slugger}}.jpg" rotation="0 -130 0"></a-sky>
+    </a-scene>
+   
+{% endblock %}
