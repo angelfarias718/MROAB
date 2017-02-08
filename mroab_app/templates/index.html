@@ -2,13 +2,27 @@
 {% load  static %}
 {% block content %}
 
-  <!-- <a-scene>
-      <a-sky src="http://i.imgur.com/FzosV5t.jpg" rotation="0 -130 0"></a-sky>
-    </a-scene>-->
-    {% for obj in obj_list %}
-    	<img src="{% static 'media/photos' %}/{{obj.slugger}}.jpg" style="width: 50%">
-    	<a href="site/{{obj.slugger}}"><h1>{{obj.title}}</h1></a>
-    	{{obj.location}}</br>
-    	{{obj.description}}</br>
+{% for obj in obj_list %}
+<center>
+<div class="col-sm-6" >
+<div class="card">
+	<img src="{% static 'media/photos' %}/{{obj.slugger}}.jpg" style="width: 100%">
+
+    <!--Card content-->
+    <div class="card-block">
+        <!--Title-->
+        <a href="site/{{obj.slugger}}"><h1>{{obj.title}}</h1></a>
+        <!--Text-->
+        <p class="card-text">{{obj.location}}</p>
+
+        <p class="card-text">{{obj.description}}</p>
+    </div>
+    <!--/.Card content-->
+
+</div>
+</div>
+   </center>
     {% endfor %}
+
+
 {% endblock %}

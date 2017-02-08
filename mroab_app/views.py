@@ -24,6 +24,7 @@ def contact(request):
 		form = ContactForm(request.POST)
 		if form.is_valid():
 			form.save()
+			form.send_message()
 			print 'Upload Complete'
 		else:
 			print 'Error: MESSAGE FAILED TO SEND!'

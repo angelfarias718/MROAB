@@ -94,11 +94,7 @@ STATICFILES_DIRS = (
 )
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+STATIC_ROOT = 'C:/Users/sergio/Documents/MROAB_Project/mroab/'
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'email'
-EMAIL_HOST_PASSWORD = 'pass'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+MEDIA_ROOT = 'C:/Users/sergio/Documents/MROAB_Project/mroab/media'
+MEDIA_URL = '/media/'

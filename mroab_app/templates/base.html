@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site Name</title>
+    <title>360 City</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.4.0/aframe.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -15,6 +15,27 @@
 </head>
 
 <body>
+<nav class="navbar navbar-fixed-top elegant-color navbar-centered">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
+            <i class="fa fa-bars" style="color:white"></i>
+        </button>
+        <a href="/" class="navbar-brand elegant-color page-scroll waves-effect waves-light" style="color:white">360 City</a>
+        <div class="container">
+            <div class="collapse navbar-toggleable-xs" id="collapseEx2">
+            <a class="navbar-brand waves-effect waves-light">&nbsp;</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a href="{% url 'about' %}" class="nav-link waves-effect waves-light">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'contact' %}" class="nav-link waves-effect waves-light">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
 
 		{% block content %}{% endblock %}  
 	<script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>

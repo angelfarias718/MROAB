@@ -1,8 +1,26 @@
-{% extends "base.html" %}
 {% load  static %}
 {% block content %}
-	<a-scene>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.4.0/aframe.js"></script>
+	<a-scene onclick="info();">
       <a-sky src="{% static 'media/photos' %}/{{obj.slugger}}.jpg" rotation="0 -130 0"></a-sky>
     </a-scene>
+
+<script type="text/javascript">
+var msg = new SpeechSynthesisUtterance();
+var voices = window.speechSynthesis.getVoices();
+msg.voice = voices[10]; // Note: some voices don't support altering params
+msg.voiceURI = 'native';
+msg.volume = 1; // 0 to 1
+msg.rate = 1; // 0.1 to 10
+msg.pitch = 0; //0 to 2
+msg.text = '';
+msg.lang = 'en-US';
+function info(){
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		msg.text="{{obj.description}}";
+		speechSynthesis.speak(msg);
+	}
+}
+</script>
    
 {% endblock %}

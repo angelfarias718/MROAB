@@ -110,3 +110,12 @@ body {
     color: #fff;
     width: 100%;
 }
+
+.test {
+  width:200px;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+  border:1px red solid;
+}
